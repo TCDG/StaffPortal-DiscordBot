@@ -1,5 +1,6 @@
 package com.xelitexirish.staffportal;
 
+import com.xelitexirish.staffportal.commands.HelpCommand;
 import com.xelitexirish.staffportal.commands.ICommand;
 import com.xelitexirish.staffportal.handlers.BotListener;
 import com.xelitexirish.staffportal.utils.BotLogger;
@@ -44,7 +45,7 @@ public class StaffPortal {
     }
 
     private static void registerCommands(){
-
+        commands.put("help", new HelpCommand());
     }
 
 

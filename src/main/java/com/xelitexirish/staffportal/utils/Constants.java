@@ -5,7 +5,7 @@ package com.xelitexirish.staffportal.utils;
  */
 public class Constants {
 
-    public static final String COMMAND_PREFIX = "/log ";
+    public static final String COMMAND_PREFIX = "/sp ";
     public static final String BOT_VERSION = "1.2.2";
 
     public static final String XELITEXIRISH_ID = "182210823630880768";
