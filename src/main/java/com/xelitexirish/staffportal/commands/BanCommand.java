@@ -21,9 +21,23 @@ public class BanCommand implements ICommand {
         // Check if the user has kick/ban perms
         if (PermissionHandler.hasPermission(event.getGuild(), event.getAuthor(), Permission.KICK_MEMBERS) || PermissionHandler.hasPermission(event.getGuild(), event.getAuthor(), Permission.BAN_MEMBERS)){
 
-            // Check if there is a mentioned user
-            for (User mentionedUsers : event.getMessage().getMentionedUsers()){
+            // Check to see that only one user was mentioned
+            if (event.getMessage().getMentionedUsers().size() == 1){
+                event.getChannel().sendMessage("Please only mention one user at a time!");
+                return;
+            }
+            User banUser = event.getMessage().getMentionedUsers().get(0);
+            assert banUser != null;
 
+            //Split up the message for punishment messages
+            String[] messageSplit = event.getMessage().getContent().split("|");
+            // 0 = reason 1 = proof 2 = expiry
+            String reason = "";
+            String proof = "";
+            String expiry = "";
+
+            if (messageSplit[0].contains("reason")){
+                
             }
         }
     }
