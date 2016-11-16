@@ -37,7 +37,7 @@ public class BanCommand implements ICommand {
             String expiry = "";
 
             if (messageSplit[0].contains("reason")){
-                
+
             }
         }
     }
